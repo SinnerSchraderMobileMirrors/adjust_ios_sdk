@@ -264,14 +264,9 @@ static const double   kSubsessionInterval =  1;                // 1 second
 }
 
 - (void)finishedTrackingWithResponse:(AIResponseData *)response {
-    //TODO remove one of the delegate call
     if ([self.delegate respondsToSelector:@selector(adjustFinishedTrackingWithResponse:)]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.delegate adjustFinishedTrackingWithResponse:response];
-        });
-
-        //[self.delegate performSelectorOnMainThread:@selector(adjustFinishedTrackingWithResponse:)
-        //                                withObject:response waitUntilDone:NO];
+        [self.delegate performSelectorOnMainThread:@selector(adjustFinishedTrackingWithResponse:)
+                                        withObject:response waitUntilDone:NO];
     }
 }
 
@@ -454,7 +449,7 @@ static const double   kSubsessionInterval =  1;                // 1 second
 }
 
 - (BOOL)checkAmount:(double)amount {
-    if (amount <= 0.0) {
+    if (amount < 0.0) {
         [self.logger error:@"Invalid amount %.1f", amount];
         return NO;
     }
