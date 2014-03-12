@@ -30,8 +30,6 @@
 
 - (void)finishedTrackingWithResponse:(AIResponseData *)response;
 
-- (void)setCallbackId:(NSString *)callbackId;
-
 @end
 
 @interface AIActivityHandler : NSObject <AIActivityHandler>

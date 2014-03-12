@@ -45,10 +45,6 @@
 // tracker name of current device
 @property (nonatomic, copy) NSString *trackerName;
 
-// callback id for Cordova JS function
-@property (nonatomic, copy) NSString *callBackId;
-
-
 + (AIResponseData *)dataWithJsonString:(NSString *)string;
 + (AIResponseData *)dataWithError:(NSString *)error;
 

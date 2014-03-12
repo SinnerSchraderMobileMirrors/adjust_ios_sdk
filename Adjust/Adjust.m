@@ -105,8 +105,4 @@ static id<AILogger> logger;
     [activityHandler trackSubsessionEnd];
 }
 
-+ (void)setCallbackId:(NSString *)callbackId {
-    [activityHandler setCallbackId:callbackId];
-}
-
 @end

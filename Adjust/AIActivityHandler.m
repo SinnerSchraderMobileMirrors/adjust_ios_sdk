@@ -265,15 +265,10 @@ static const double   kSubsessionInterval =  1;                // 1 second
 }
 
 - (void)finishedTrackingWithResponse:(AIResponseData *)response {
-    response.callBackId = self.callbackId;
     if ([self.delegate respondsToSelector:@selector(adjustFinishedTrackingWithResponse:)]) {
         [self.delegate performSelectorOnMainThread:@selector(adjustFinishedTrackingWithResponse:)
                                         withObject:response waitUntilDone:NO];
     }
-}
-
-- (void)setCallbackId:(NSString *)callbackId {
-    self.callbackId = callbackId;
 }
 
 #pragma mark - private

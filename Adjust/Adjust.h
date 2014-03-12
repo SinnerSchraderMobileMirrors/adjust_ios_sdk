@@ -141,11 +141,6 @@ static NSString * const AIEnvironmentProduction = @"production";
  */
 + (void)trackSubsessionEnd;
 
-/**
- * Store callback id for Cordova javascript callback
- */
-+ (void)setCallbackId:(NSString *)callbackId;
-
 @end
 
 
