@@ -1,6 +1,6 @@
 ##Integrate adjust with Mixpanel SDK
 
-Mixpanel API allows to register common properties to be sent in all events as `"super properties"`, as it is explained in the [Mixpanel page][mixpanel_ios]. To integrate adjust with all tracked events of Mixpanel, register the following properties. Replace the values between braces ´{value}´ with the correspondent value.
+Mixpanel API allows to register common properties to be sent in all events as `"super properties"`, as it is explained in the [Mixpanel page][mixpanel_ios]. To integrate adjust with all tracked events of Mixpanel, register the following properties. Replace the values between braces `{value}` with the correspondent value.
 
 ```objc
 Mixpanel *mixpanel = [Mixpanel sharedInstance];
